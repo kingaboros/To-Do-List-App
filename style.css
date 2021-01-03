@@ -141,3 +141,10 @@ li {
   color: rgba(112, 31, 31, 0.418);
   transition: all 200ms ease-in-out;
 }
+
+.author {
+  font-weight: 300;
+  padding-top: 50px;
+  margin: 0 auto;
+  text-decoration: none;
+}
