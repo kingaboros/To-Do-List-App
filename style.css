@@ -1,29 +1,9 @@
-.container {
-  font-family: "Raleway", sans-serif;
+html {
+  height: 100vh;
+  width: 750px;
   margin: 0 auto;
-  width: 800px;
+  font-family: "Raleway", sans-serif;
 }
-
-.header {
-  position: relative;
-  height: 20px;
-  background-image: url(images/hero.jpg);
-  background-size: cover;
-
-  padding: 150px;
-  margin-top: 10px;
-}
-
-.header::before {
-  content: "";
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  background-color: rgba(2, 2, 2, 0.445);
-}
-
 h1 {
   position: relative;
   color: #fff;
@@ -42,4 +22,122 @@ h2 {
   margin: 0;
   top: 71px;
   left: -125px;
+}
+
+form {
+  background-color: #4f17192c;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 15px;
+  margin: 0 auto;
+  line-height: 15px;
+  display: flex;
+  width: 710px;
+  position: relative;
+  left: -20px;
+  box-shadow: 2px solid rgba(49, 47, 47, 0.568);
+  border-top: 1px solid black;
+}
+
+button {
+  border: none;
+  background-color: #4f171925;
+  font-size: 30px;
+  outline: 0;
+  color: rgb(112, 31, 31);
+}
+button:hover {
+  color: rgb(138, 67, 67);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+input[type="text"] {
+  padding: 10px;
+  background-color: #4f171923;
+  height: 30px;
+  outline: none;
+  border: none;
+  color: #000;
+  flex-grow: 1;
+  font-family: "Raleway", sans-serif;
+}
+
+ul {
+  padding-left: 15px;
+  list-style: none;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  font-size: 20px;
+  margin-left: -6px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  position: relative;
+  height: 20px;
+  background-image: url(images/hero.jpg);
+  background-size: cover;
+  padding: 150px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(2, 2, 2, 0.445);
+  border-radius: 10px;
+}
+
+:placeholder-shown {
+  font-style: italic;
+  border: none;
+  background-color: #4f171925;
+  width: 710px;
+  padding: 10px;
+}
+
+.task-list {
+  margin: 0 auto;
+  display: flex;
+  width: 740px;
+  position: relative;
+  left: -20px;
+  background-color: rgb(255, 255, 255);
+  padding: 10px, 30px;
+  height: 100%;
+}
+
+.clear-all {
+  display: flex;
+  justify-content: flex-end;
+  text-decoration: none;
+  margin-bottom: 10px;
+  padding: 10px 3px;
+  margin-right: -25px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 15px;
+  color: rgb(112, 31, 31);
+}
+
+.clear-all:hover {
+  color: rgba(112, 31, 31, 0.418);
+  transition: all 200ms ease-in-out;
 }

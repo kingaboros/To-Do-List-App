@@ -15,26 +15,33 @@
     <link rel="stylesheet" href="style.css" />
     <title>Vanilla JavaScript Todo App</title>
   </head>
-  <body class="container">
-    <header>
-      <div class="header">
-        <h1 class="heading">To Do List</h1>
-        <h2 class="date">Sunday, 03 January 2021</h2>
-      </div>
+  <body>
+    <header class="header">
+      <h1 class="heading">To Do List</h1>
+      <h2 class="date">Sunday, 03 January 2021</h2>
     </header>
     <div class="main">
-      <div class="tasks">
-        <ul></ul>
-        <a href="#" class="clear-all" id="clearAll">Clear All</a>
+      <div class="task-list">
+        <ul>
+          <li>test</li>
+          <li>test 2</li>
+        </ul>
       </div>
 
+      <a href="#" class="clear-all" id="clearAll">Clear All</a>
       <form>
-        <button type="submit"><i class="fas fa-plus-circle"></i></button>
+        <button type="submit">
+          <i class="fas fa-plus-circle" class="plus-icon"></i>
+        </button>
         <input type="text" placeholder="add new task here..." />
       </form>
     </div>
     <div class="author">
-      👩‍💻 <a href="#"> Open-source code </a> by <a href="#"> Kinga Boros </a>
+      👩‍💻
+      <a href="https://github.com/kingaboros/To-Do-List-App.git">
+        Open-source code
+      </a>
+      by <a href="https://www.linkedin.com/in/kingaboros/"> Kinga Boros </a>
     </div>
     <script type="text/JavaScript" src="script.js"></script>
   </body>
