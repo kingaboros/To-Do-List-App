@@ -42,7 +42,7 @@ form {
 button {
   border: none;
   background-color: #4f171925;
-  font-size: 30px;
+  font-size: 25px;
   outline: 0;
   color: rgb(112, 31, 31);
 }
@@ -64,15 +64,16 @@ input[type="text"] {
 }
 
 ul {
-  padding-left: 15px;
+  padding-left: 7px;
   list-style: none;
+  flex-grow: 1;
 }
 
 li {
   display: flex;
   align-items: center;
-  padding: 15px 0;
-  font-size: 20px;
+  padding: 2px 0;
+  font-size: 16px;
   margin-left: -6px;
 }
 
@@ -140,6 +141,12 @@ li {
 .clear-all:hover {
   color: rgba(112, 31, 31, 0.418);
   transition: all 200ms ease-in-out;
+}
+
+.todo-item {
+  flex-grow: 1;
+  background-color: #e7dede;
+  padding: 6px;
 }
 
 .author {
