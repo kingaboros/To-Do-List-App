@@ -77,6 +77,10 @@ li {
   margin-left: -6px;
 }
 
+i {
+  pointer-events: none;
+}
+
 .main {
   display: flex;
   justify-content: center;
@@ -150,8 +154,18 @@ li {
 }
 
 .author {
+  font-size: 14px;
   font-weight: 300;
   padding-top: 50px;
   margin: 0 auto;
   text-decoration: none;
+}
+
+.todo-list-item {
+  transition: all 0.3s ease-out;
+}
+
+.todo-list-item-fall {
+  transform: translateY(12rem) rotateZ(10deg);
+  opacity: 0;
 }

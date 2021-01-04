@@ -61,12 +61,46 @@ function addToDo(todo) {
   let li = document.createElement("li");
 
   li.innerHTML = `
-<span class="todo-item">${todo}</span>
-<button name="checkButton"><i class="fas fa-check-circle"></i></button>
-<button name="deleteButton"><i class="fas fa-trash"></i></button>
+    <span class="todo-item">${todo}</span>
+    <button name="checkButton"><i class="fas fa-check-circle"></i></button>
+    <button name="deleteButton"><i class="fas fa-trash"></i></button>
+    
+    `;
 
-`;
-
-  ul.classList.add("todo-list-item");
+  li.classList.add("todo-list-item");
   ul.appendChild(li);
+}
+
+//Check & Remove buttons
+
+document
+  .querySelector("ul")
+  .addEventListener("click", handleClickDeleteOrCheck);
+
+function handleClickDeleteOrCheck(event) {
+  if (event.target.name == "checkButton") checkTodo(event);
+  if (event.target.name == "deleteButton") deleteTodo(event);
+}
+
+function checkTodo(event) {
+  let item = event.target.parentNode;
+  if (item.style.textDecoration == "line-through")
+    item.style.textDecoration = "none";
+  else item.style.textDecoration = "line-through";
+}
+
+function deleteTodo(event) {
+  let item = event.target.parentNode;
+  item.addEventListener("transitionend", function () {
+    item.remove();
+  });
+  item.classList.add("todo-list-item-fall");
+}
+
+// Clear All Link
+
+document.getElementById("clearAll").addEventListener("click", handleClearAll);
+
+function handleClearAll(event) {
+  document.querySelector("ul").innerHTML = "";
 }
